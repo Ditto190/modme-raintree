@@ -20,7 +20,7 @@
   "scripts": {
     "bench": "node bench/run.mjs",
     "bench:generate": "node bench/generate-workloads.mjs",
-    "test": "node --test",
+    "test": "node --test 'test/*.test.js'",
     "test:security": "node --test test/*.test.js",
     "lint": "eslint src/ test/ bin/ bench/ templates/.claude/utils/",
     "prepublishOnly": "bun run lint && bun test"

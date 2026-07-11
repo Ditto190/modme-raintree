@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "profile": "custom",
+  "targets": ["claude", "cursor", "codex"],
+  "skills": [
+    "cleanup-all",
+    "cleanup-types",
+    "toon-formatter"
+  ],
+  "mcps": [
+    {
+      "name": "py-executor",
+      "command": "${PYTHON_BIN}",
+      "args": ["-m", "mcp_server"],
+      "env": {
+        "PYTHONPATH": "${LOCAL_PYTHON_PATH}",
+        "MCP_RUNTIME_TIMEOUT": "${MCP_RUNTIME_TIMEOUT}"
+      }
+    },
+    {
+      "name": "fs-watchdog",
+      "command": "${NODE_BIN}",
+      "args": ["${FS_WATCHDOG_SCRIPT}"],
+      "env": {
+        "WATCHDOG_ROOT": "${WATCHDOG_ROOT}",
+        "WATCHDOG_IGNORE_PATTERNS": "${WATCHDOG_IGNORE_PATTERNS}"
+      }
+    }
+  ],
+  "model": {
+    "claude": "claude-sonnet-4-5"
+  }
+}

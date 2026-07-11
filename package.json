@@ -63,7 +63,7 @@
     "commander": "15.0.0",
     "fs-extra": "11.3.3",
     "inquirer": "14.0.2",
-    "ora": "9.4.0"
+    "ora": "9.4.1"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

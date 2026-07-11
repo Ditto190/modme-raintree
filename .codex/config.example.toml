@@ -1,0 +1,19 @@
+# Example project-local Codex config.
+#
+# Keep machine policy in dotfiles. Keep repo policy here.
+# Do not commit auth, sessions, live SQLite DBs, global state, or plugin caches.
+
+[features]
+goals = true
+js_repl = false
+
+[agents]
+max_threads = 2
+max_depth = 1
+
+# Project trust is intentionally not declared here.
+# Trust is a machine-local decision, not a repository default.
+#
+# Avoid:
+# [projects."/absolute/path/to/repo"]
+# trust_level = "trusted"

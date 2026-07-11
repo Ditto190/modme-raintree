@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-04T16:53:09.783Z",
+  "benchmark": "toon-vs-json-token-savings",
+  "tokenizer": {
+    "name": "gpt-tokenizer",
+    "version": "3.0.0",
+    "note": "OpenAI BPE proxy; provider tokenizer counts can differ."
+  },
+  "encoder": {
+    "name": "@toon-format/toon",
+    "version": "2.1.0"
+  },
+  "workloadDir": "bench/workloads",
+  "workloads": [
+    {
+      "file": "api-response-users.json",
+      "jsonBytes": 10424,
+      "toonBytes": 4576,
+      "jsonTokens": 4133,
+      "toonTokens": 2128,
+      "delta": 2005,
+      "savedPct": 48.511976772320345,
+      "encodeError": null
+    },
+    {
+      "file": "db-transactions.json",
+      "jsonBytes": 15721,
+      "toonBytes": 4972,
+      "jsonTokens": 5708,
+      "toonTokens": 2252,
+      "delta": 3456,
+      "savedPct": 60.54660126138752,
+      "encodeError": null
+    },
+    {
+      "file": "irregular-nested.json",
+      "jsonBytes": 437,
+      "toonBytes": 247,
+      "jsonTokens": 135,
+      "toonTokens": 80,
+      "delta": 55,
+      "savedPct": 40.74074074074074,
+      "encodeError": null
+    },
+    {
+      "file": "logs-events.json",
+      "jsonBytes": 32853,
+      "toonBytes": 11505,
+      "jsonTokens": 13052,
+      "toonTokens": 6266,
+      "delta": 6786,
+      "savedPct": 51.992031872509955,
+      "encodeError": null
+    },
+    {
+      "file": "metrics-series.json",
+      "jsonBytes": 27780,
+      "toonBytes": 7649,
+      "jsonTokens": 13537,
+      "toonTokens": 4622,
+      "delta": 8915,
+      "savedPct": 65.85654133116643,
+      "encodeError": null
+    },
+    {
+      "file": "small-array.json",
+      "jsonBytes": 131,
+      "toonBytes": 46,
+      "jsonTokens": 62,
+      "toonTokens": 27,
+      "delta": 35,
+      "savedPct": 56.451612903225815,
+      "encodeError": null
+    }
+  ],
+  "summary": {
+    "workloadCount": 6,
+    "jsonTokens": 36627,
+    "toonTokens": 15375,
+    "tokensSaved": 21252,
+    "savingsPct": 58.023
+  },
+  "thresholds": {
+    "minSavingsPct": 40,
+    "encodeFailures": 0,
+    "passed": true
+  }
+}
